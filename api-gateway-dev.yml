@@ -1,0 +1,18 @@
+zuul:
+  routes:
+    #随意定义   /myProduct/product/list -> /product/product/list
+    myProduct:
+      path: /myProduct/**
+      #路由到哪个服务
+      serviceId: product
+      sensitiveHeaders:
+    #简介写法
+#    product: /myProduct/**
+  #排除某些路由
+  ignored-patterns:
+    - /**/product/listForOrder
+
+#设置是否可以查看路由规则
+management:
+  security:
+    enabled: false
