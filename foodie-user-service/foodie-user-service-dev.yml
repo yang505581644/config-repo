@@ -4,5 +4,6 @@ mariadb:
   password:  '{cipher}be960a21ba0fcaccca1259c3a27f110dd1e392f23eb407fbc131366df4b47654'
 
 # 功能开关 - 开启/关闭注册功能
-
-# actuator
+userservice:
+  registration:
+    disabled: true
